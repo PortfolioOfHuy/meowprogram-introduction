@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import SlideShow from "./SlideShow";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        {/* Mặc định chuyển hướng đến slide đầu tiên */}
+        <Route path="/" element={<Navigate to="/0?click=0" replace />} />
+        {/* Route để hiển thị các slide */}
+        <Route path="/:slideIndex" element={<SlideShow />} />
+        {/* Route fallback nếu người dùng nhập URL không hợp lệ */}
+        <Route path="*" element={<h1>404 - Slide not found</h1>} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
