@@ -54,33 +54,46 @@ const SlideShow = () => {
     <div className="container">
       <h1>{slides[index].title}</h1>
       <div className="slide" onClick={handleSlideClick}>
-        {slides[index].contents.slice(0, visibleCount).map((content, i) => (
-          <div key={i} className="box">
-            {content}
-          </div>
-        ))}
+        <div className="content-wrapper">
+          {slides[index].contents.slice(0, visibleCount).map((content, i) => (
+            <div
+              key={i}
+              className="box"
+              style={{
+                animationDelay: `${i * 0.1}s`,
+              }}
+            >
+              {content}
+            </div>
+          ))}
+        </div>
       </div>
       <div className="buttons">
-        {visibleCount < slides[index].contents.length ? (
-          <button onClick={handleNextClick} className="btn btn-click">
-            Click ({visibleCount}/{slides[index].contents.length})
-          </button>
-        ) : (
+        <div className="navigation-group">
           <button
-            onClick={goToNextSlide}
-            className={`btn btn-next ${index >= maxSlides ? "disabled" : ""}`}
-            disabled={index >= maxSlides}
+            onClick={goToPrevSlide}
+            className={`btn btn-prev ${index === 0 ? "disabled" : ""}`}
+            disabled={index === 0}
           >
-            Next Slide
+            ← Previous
           </button>
-        )}
-        <button
-          onClick={goToPrevSlide}
-          className={`btn btn-prev ${index === 0 ? "disabled" : ""}`}
-          disabled={index === 0}
-        >
-          Previous Slide
-        </button>
+          <span className="slide-count">
+            {index + 1} / {slides.length}
+          </span>
+          {visibleCount < slides[index].contents.length ? (
+            <button onClick={handleNextClick} className="btn btn-click">
+              Next Item ({visibleCount}/{slides[index].contents.length})
+            </button>
+          ) : (
+            <button
+              onClick={goToNextSlide}
+              className={`btn btn-next ${index >= maxSlides ? "disabled" : ""}`}
+              disabled={index >= maxSlides}
+            >
+              Next Slide →
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
