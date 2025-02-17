@@ -10,8 +10,8 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Mặc định chuyển hướng đến slide đầu tiên */}
-        <Route path="/" element={<Navigate to="/0?click=0" replace />} />
+        {/* Mặc định chuyển hướng đến slide đầu tiên không có click parameter */}
+        <Route path="/" element={<Navigate to="/0" replace />} />
         {/* Route để hiển thị các slide */}
         <Route path="/:slideIndex" element={<SlideShow />} />
         {/* Route fallback nếu người dùng nhập URL không hợp lệ */}
