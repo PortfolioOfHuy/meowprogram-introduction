@@ -3,17 +3,17 @@ import { useParams, useSearchParams, useNavigate } from "react-router-dom";
 
 const slides = [
   {
-    title: "Nội dung chính",
+    title: "Kiến thức cơ bản",
     contents: [
-      "1. Giới thiệu về phần cứng máy tính",
-      "2. Giới thiệu về phần mềm",
+      "1. Giới thiệu chung",
+      "2. Transistor",
       "3. Giới thiệu về lập trình",
       "4. Giới thiệu về mạng máy tính",
       "5. Giới thiệu về bảo mật",
     ],
   },
   {
-    title: "Phần cứng máy tính",
+    title: "Sơ lược về máy tính",
     contents: [
       "CPU(Central Processing Unit): xử lý tất cả các phép toán và điều khiển các hoạt động của hệ thống.",
       "RAM(Random Access Memory): Là bộ nhớ tạm thời giúp lưu trữ dữ liệu và chương trình đang chạy, cho phép CPU truy cập nhanh chóng để xử lý.",
@@ -23,9 +23,9 @@ const slides = [
     ],
   },
   {
-    title: "Phần mềm",
+    title: "Transistor",
     contents: [
-      "Hệ điều hành (Operating System)",
+      "Transistor là gì? Linh kiện điện tử giúp điều khiển và khuếch đại tín hiệu. ",
       "Phần mềm ứng dụng (Application Software)",
       "Trình duyệt web (Web Browsers)",
       "Công cụ phát triển (Development Tools)",
