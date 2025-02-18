@@ -556,22 +556,35 @@ Trong hệ nhị phân, các số lẻ luôn kết thúc bằng chữ số 1 và
       {
         type: "text",
         content: `1. Xử Lý Dữ Liệu Trong Máy Tính:
-• Mọi dữ liệu như số, ký tự, hình ảnh, âm thanh đều được chuyển đổi thành các dãy số nhị phân (0 và 1) để máy tính có thể xử lý và lưu trữ.`,
+• Mọi dữ liệu như số, ký tự, hình ảnh, âm thanh đều được chuyển đổi thành các dãy số nhị phân (0 và 1) để máy tính có thể xử lý và lưu trữ.
+• Ví dụ: Chữ cái 'A' được biểu diễn bằng 01000001 trong mã ASCII.`,
       },
       {
         type: "text",
         content: `2. Thiết Kế Mạch Điện Tử và Vi Xử Lý:
-• Hệ nhị phân là cơ sở cho hoạt động của các mạch điện tử, dùng trạng thái 0 và 1 để bật tắt các cổng logic, thực hiện phép toán và điều khiển thiết bị.`,
+• Hệ nhị phân là cơ sở cho hoạt động của các mạch điện tử, dùng trạng thái 0 và 1 để bật tắt các cổng logic.
+• Các phép toán số học và logic đều được thực hiện thông qua các cổng logic cơ bản (AND, OR, NOT).`,
       },
       {
         type: "text",
         content: `3. Lập Trình và Ngôn Ngữ Máy:
-• Các chương trình máy tính cuối cùng đều được biên dịch thành mã nhị phân (mã máy) để vi xử lý thực thi, vì máy tính chỉ hiểu các lệnh dưới dạng bit.`,
+• Mọi ngôn ngữ lập trình bậc cao (Python, Java, C++) đều được biên dịch thành mã máy nhị phân.
+• CPU chỉ có thể hiểu và thực thi các lệnh dưới dạng chuỗi bit 0 và 1.`,
       },
       {
         type: "text",
-        content: `4. Lưu Trữ Dữ Liệu Trên Bộ Nhớ:
-• Dữ liệu được lưu trữ trên các thiết bị như ổ cứng, RAM, và thẻ nhớ dưới dạng nhị phân, giúp định dạng và quản lý các thông tin số một cách chính xác.`,
+        content: `4. Lưu Trữ Dữ Liệu:
+• Tất cả các thiết bị lưu trữ (ổ cứng, RAM, USB) đều sử dụng hệ nhị phân.
+• Mỗi bit được lưu trữ bằng các phương pháp vật lý khác nhau (điện tích, từ tính).`,
+      },
+      {
+        type: "text",
+        content: `5. Kết Luận:
+• Hệ nhị phân là nền tảng của toàn bộ công nghệ số hiện đại.
+• Việc hiểu về hệ nhị phân giúp chúng ta:
+  - Nắm được cách máy tính xử lý thông tin
+  - Tối ưu hóa việc lưu trữ và xử lý dữ liệu
+  - Hiểu rõ hơn về bảo mật và mã hóa dữ liệu`,
       },
     ],
   },
