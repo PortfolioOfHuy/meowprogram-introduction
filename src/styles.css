@@ -433,3 +433,36 @@ h1 {
     font-size: 0.95rem;
   }
 }
+
+/* Style cho bảng trong box */
+.box table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.box td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  text-align: center;
+  color: #64ffda;
+}
+
+.box tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Style cho header của bảng */
+.box tr:first-child {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Style cho border của bảng */
+.box table {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
